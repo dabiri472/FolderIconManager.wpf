@@ -1,0 +1,23 @@
+<Application x:Class="FolderIconManager.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FolderIconManager.WPF"
+             xmlns:converters="clr-namespace:FolderIconManager.WPF.Converters"
+             StartupUri="Views/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Value Converters -->
+            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converters:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+            <converters:NullToBooleanConverter x:Key="NullToBooleanConverter"/>
+            <converters:NullToImageConverter x:Key="NullToImageConverter"/>
+            
+            <!-- Material Design Shadow Effect -->
+            <DropShadowEffect x:Key="MaterialDesignShadowDepth1" 
+                              Color="Black" 
+                              Opacity="0.1" 
+                              ShadowDepth="2" 
+                              BlurRadius="8"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
